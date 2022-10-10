@@ -1,8 +1,6 @@
-# Sample Hardhat Project
+# SeeDAO Score
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+SeeDAO Score 是 SeeDAO 社区积分。该积分可由管理员批量发放。普通用户收到积分后不可转移。
 
 ```shell
 npx hardhat help
