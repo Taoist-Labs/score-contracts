@@ -1,0 +1,42 @@
+[
+    {
+        "account": "0x9301f653551903d42D7d3D3CB3bADCd154aF6B29",
+        "amount": "200"
+    },
+    {
+        "account": "0x7d31974357498c26cAf13087E7609A2435039c44",
+        "amount": "200"
+    },
+    {
+        "account": "0x3d25DdA985AbF6F19bEBD946607Ec2295159c63b",
+        "amount": "200"
+    },
+    {
+        "account": "0x189dBF671B5256c2EF3a3dEBe84B40903876B4d8",
+        "amount": "200"
+    },
+    {
+        "account": "spacelaika.eth",
+        "amount": "210"
+    },
+    {
+        "account": "0x9aa9abd9d470a16e3ba6189d8ac86613ff8330e5",
+        "amount": "220"
+    },
+    {
+        "account": "0x86Fc1b08fDEBb8D855019b5D7318a696C6de9e98",
+        "amount": "250"
+    },
+    {
+        "account": "0x106B48f8A7519b6d67c8f0EbC09f54A5d0eB8130",
+        "amount": "260"
+    },
+    {
+        "account": "0x8ec882e845f60c7c0a65dce55982a0139a65dfe7",
+        "amount": "340"
+    },
+    {
+        "account": "alexsu.eth",
+        "amount": "360"
+    }
+]

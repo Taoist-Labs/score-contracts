@@ -1,0 +1,82 @@
+[
+    {
+        "account": "0x1d9136fa6c577aDBf437dB4e63dc216D331289e6",
+        "amount": "10"
+    },
+    {
+        "account": "0x1496F0bc152842c79993946946626af285B2b077",
+        "amount": "10"
+    },
+    {
+        "account": "0x044372d3d19D34e77d5eE9c53cCd68703B6B669C",
+        "amount": "10"
+    },
+    {
+        "account": "0xED3fb32c5C61f00f4dc7f4B64FD8378bF1A15f61",
+        "amount": "20"
+    },
+    {
+        "account": "0xDc0Fb244722383BB12fB9970Bc46e60c94Fd78f7",
+        "amount": "20"
+    },
+    {
+        "account": "0xCcf97cEcdd74D49bA17E58Ce9d72DFc9ed2d983f",
+        "amount": "20"
+    },
+    {
+        "account": "0xcf1b6522890c640dcd5075284d3d73e193d21839",
+        "amount": "30"
+    },
+    {
+        "account": "0x1eF52Bc0399977A8A3f171030cc9c9eBBF1F12CD",
+        "amount": "30"
+    },
+    {
+        "account": "0x0aab65863e955fa8e8d6ad4318bcfd82f3e0aa82",
+        "amount": "30"
+    },
+    {
+        "account": "0xc974Ae1d5353068641Fc713a35f991FA3FF162A9",
+        "amount": "40"
+    },
+    {
+        "account": "0x97dD69ed21aD059bC7ff6c3A52d84a29E966202d",
+        "amount": "40"
+    },
+    {
+        "account": "0xb43b1164F189D2D277094A7A34836a9d3d271fd2",
+        "amount": "50"
+    },
+    {
+        "account": "0x8ab6B5c37b1ffA826ECfbDc2F6A835D64e755100",
+        "amount": "60"
+    },
+    {
+        "account": "0xbe3018ec0a8d780833336251e591a58097d8618a",
+        "amount": "70"
+    },
+    {
+        "account": "0xF420850AC67c34e3bFF6c18f8361D498eB7925BF",
+        "amount": "100"
+    },
+    {
+        "account": "0x390cfeB54A0e4C0D5a83b78Ee6CA7CD8B312Ff55",
+        "amount": "130"
+    },
+    {
+        "account": "0x255677b3A8E1003e3d4C7aB18726e881d4d331e4",
+        "amount": "140"
+    },
+    {
+        "account": "winterhouse.eth",
+        "amount": "170"
+    },
+    {
+        "account": "0x273cb48e6189c27474F5520F1795D31fb5F9d649",
+        "amount": "180"
+    },
+    {
+        "account": "0xACA455F98f08366DF95E2729BF6fd3e2976BF68f",
+        "amount": "200"
+    }
+]

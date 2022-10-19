@@ -1,0 +1,82 @@
+[
+    {
+        "account": "0x45120Ece28C0c2076646dcCD307ee6c4bf18F475",
+        "amount": "1167"
+    },
+    {
+        "account": "0x44d68eC828438E690F3575C9e11A2F642b593169",
+        "amount": "1171"
+    },
+    {
+        "account": "0xC153CF1f34EDA8FC7E28ce4f4B891194bdF0b145",
+        "amount": "1500"
+    },
+    {
+        "account": "0x8b1Ad12fBaf6c2CC6f831C4FAe490EA437217CD5",
+        "amount": "1568"
+    },
+    {
+        "account": "0x6bD68d667ECcEA663b2a2Bee1311F7AD6c817602",
+        "amount": "1700"
+    },
+    {
+        "account": "0x97ECA9abc70d37149012F2A9d02f21646b5d684B",
+        "amount": "1900"
+    },
+    {
+        "account": "0x920aAdB58050EF2Dd18A0c0e4fF6D54A88B67781",
+        "amount": "1902"
+    },
+    {
+        "account": "0x01917dfa012027D59C86250e887A45f6d8f49F6D",
+        "amount": "1902"
+    },
+    {
+        "account": "0xE02533f1B8bc4BefD8561Df63721A96936F978f9",
+        "amount": "2000"
+    },
+    {
+        "account": "0x5af6bB85508b1F9Ec6371a2F4a489e8532775bfd",
+        "amount": "2057"
+    },
+    {
+        "account": "0xa0C4Fa4E20c58d100986b91bdBcf3bc363Acc107",
+        "amount": "2200"
+    },
+    {
+        "account": "0x4c45929cbb3ADB3d1168e04DB02dCa1E6F0091e3",
+        "amount": "2400"
+    },
+    {
+        "account": "0xef0F49C09F502EfBB5Be9b12e2e391a44653E3Fd",
+        "amount": "2500"
+    },
+    {
+        "account": "0xa50Bb794012b9617CdCAC8653f8041842F3c4315",
+        "amount": "2500"
+    },
+    {
+        "account": "0x92303a59161BE115AD6248cAc01555b39F7D77B1",
+        "amount": "2800"
+    },
+    {
+        "account": "0xC7302C698b665380b3bf15cFEB8D38514d91AaDd",
+        "amount": "3000"
+    },
+    {
+        "account": "0x0374dd85fdbadaff0377bbe7d7753b054bd9e7e0",
+        "amount": "3000"
+    },
+    {
+        "account": "0x0b67E4577e5Fa87901483aFbF5BA11C2ebF1297A",
+        "amount": "3100"
+    },
+    {
+        "account": "0xE28391FD7a4aCb2c2C0F72b334a0D0cC10626791",
+        "amount": "3140"
+    },
+    {
+        "account": "0x85633c25d2518dc5e6e05b8c9dc4596db2918575",
+        "amount": "3140"
+    }
+]

@@ -1,0 +1,122 @@
+[
+    {
+        "account": "0x28A6cAb52923b40Dbbc11683Cd72bcAFbB6a1cB5",
+        "amount": "3804"
+    },
+    {
+        "account": "0xdeD92478Fb928a677b56E023E85eC021139Ed991",
+        "amount": "3967"
+    },
+    {
+        "account": "0x01116BfF69113dc1125DD9FC465eED55cF32e9Ca",
+        "amount": "4110"
+    },
+    {
+        "account": "0xf6c00C65a50f418A475226AEA2761B3D22D15151",
+        "amount": "4275"
+    },
+    {
+        "account": "0x1DD17a7386a883674eC2CeFa7cbE6da75E719046",
+        "amount": "4300"
+    },
+    {
+        "account": "0x8bA03B63396C97B2fFd0Ea80A0be006D9FC2e02c",
+        "amount": "4500"
+    },
+    {
+        "account": "0x38Bf2A516606DbF474167fe09Dc5Ea203fbf7629",
+        "amount": "4583"
+    },
+    {
+        "account": "0x4C7Be8167c33CD4a1FC89E1aFAFb2724EB7d42f9",
+        "amount": "4586"
+    },
+    {
+        "account": "0x8817E259B93256bbb86DE6Cd2E9b8612763Cc674",
+        "amount": "4878"
+    },
+    {
+        "account": "0x1678B0BD85337D2C56baa6bD83f36f3f359482C1",
+        "amount": "4888"
+    },
+    {
+        "account": "0x9731c556A8F285fA33Ff3dec4aDd14784b944036",
+        "amount": "5000"
+    },
+    {
+        "account": "0x82944b68bB92fA11764041AA61204b5fdC85F429",
+        "amount": "5000"
+    },
+    {
+        "account": "0x5eb71CaeaDf22107A578bC5261ec9A1e16FAD5f8",
+        "amount": "5000"
+    },
+    {
+        "account": "0xb789A1297b1f5d46435d1679e18696438A795b04",
+        "amount": "5020"
+    },
+    {
+        "account": "0xF95269E144074e18C6AcD0F1102Ffc5A2E51818d",
+        "amount": "5040"
+    },
+    {
+        "account": "0xc6c68296f0d9694C45977f5842303568d0F8B90c",
+        "amount": "5261"
+    },
+    {
+        "account": "0xfbf0dab80535dB219540Ae5eB972c4955580EA89",
+        "amount": "5500"
+    },
+    {
+        "account": "0x3bc6e78258959677C449Dd18710741bBe8daadd2",
+        "amount": "5500"
+    },
+    {
+        "account": "0x682993931130995b557f0b4d4c9f968a1f655a81",
+        "amount": "5690"
+    },
+    {
+        "account": "0x258ce53268BEaA9BA97fA6b7790d7555ae4044fc",
+        "amount": "5706"
+    },
+    {
+        "account": "0x5e6445B0a68536FE267A9EF7639Bf04851889cc8",
+        "amount": "5902"
+    },
+    {
+        "account": "0xC247A2a860eC45854F2C697F42db41840df8962e",
+        "amount": "5949"
+    },
+    {
+        "account": "0xb9f8a98916c14036aEedA49d9C281e25011F48a3",
+        "amount": "6010"
+    },
+    {
+        "account": "hydao.eth",
+        "amount": "6500"
+    },
+    {
+        "account": "0x6e12cB75f1Bd2811fD0aF6A0bcA1378D0d5A9beA",
+        "amount": "6660"
+    },
+    {
+        "account": "0x710575C123338E168ef309DE3791a210a3c939aE",
+        "amount": "6700"
+    },
+    {
+        "account": "somehacker.eth",
+        "amount": "6901"
+    },
+    {
+        "account": "0xf798F9982A61d4e442e08f06451Fa53f879c2b81",
+        "amount": "7000"
+    },
+    {
+        "account": "0xBa1555ddbC9961AAE5d569C6dCa029D598c51436",
+        "amount": "7000"
+    },
+    {
+        "account": "0xd0cE3A24CB7AfdCaCD72197b4c28799F73611A4f",
+        "amount": "7100"
+    }
+]

@@ -1,0 +1,162 @@
+[
+    {
+        "account": "0xcc5DB6F29944979a3f822E705412b471DcD9Da74",
+        "amount": "7110"
+    },
+    {
+        "account": "0xCdfAbc2005b8Ad067E105edb31cb922CA2a7A44D",
+        "amount": "7500"
+    },
+    {
+        "account": "0x23549F0f16033D7aaf01e65Ddb6b8E1EEd5b4eCf",
+        "amount": "7608"
+    },
+    {
+        "account": "0x6098E17a2945d2858368329e03c0a4A64A549814",
+        "amount": "7686"
+    },
+    {
+        "account": "0xFfce09CA00041e196E10458d5f981C0a1a76FE98",
+        "amount": "8500"
+    },
+    {
+        "account": "0x6C7C73Aef66836A1Eeb524376E13E71cFb52D3EC",
+        "amount": "9000"
+    },
+    {
+        "account": "0x4ac616D3b98289FCCD2De3a9ac7841d24bc2F52D",
+        "amount": "9000"
+    },
+    {
+        "account": "0x3c7A96dc4456c16BE8D525AB57372A17E4314cd7",
+        "amount": "9000"
+    },
+    {
+        "account": "0x1286bFF958ddFB34dC0E49493CbC53F9E6d27b60",
+        "amount": "9000"
+    },
+    {
+        "account": "0xE17205b104F7BD918C08936924d1c2757e37A4E7",
+        "amount": "9010"
+    },
+    {
+        "account": "0x5a4403659E239d88319328C5bC80599Efb6e08a1",
+        "amount": "9710"
+    },
+    {
+        "account": "kirinparadise.eth",
+        "amount": "10000"
+    },
+    {
+        "account": "0x81ecE5B8e7C464Aa5C6297ef05aE1d9eeBe59627",
+        "amount": "10125"
+    },
+    {
+        "account": "0xb14DcE20C83727b4ee807AeD7aE7046CF3e1870e",
+        "amount": "10500"
+    },
+    {
+        "account": "0xCF7F26Fa54cD80ED00793b28B9f5856964b6885d",
+        "amount": "11100"
+    },
+    {
+        "account": "0xa672F027765d044Ea786149C86DAeF1C0344F901",
+        "amount": "11410"
+    },
+    {
+        "account": "0x2cA8b80c296F341b3F4e469494755DF557033Ee3",
+        "amount": "11954"
+    },
+    {
+        "account": "0x4FA96D31dD15CE27537130d4B56cAEe0Cb436051",
+        "amount": "12000"
+    },
+    {
+        "account": "0xe30CE0Ad68192CF1FA258dF0b7d7a6fcF64B580B",
+        "amount": "12004"
+    },
+    {
+        "account": "runtao.eth",
+        "amount": "12600"
+    },
+    {
+        "account": "0x31e292ba33e01C3a9d3467890E2E5C99e1d6562B",
+        "amount": "12920"
+    },
+    {
+        "account": "0x9bD8011Af154f63589D8c71D50238c44aD7A6764",
+        "amount": "13000"
+    },
+    {
+        "account": "0xf62AAdAdf80f0CeE151AF3851a9B3866255c6CD4",
+        "amount": "13344"
+    },
+    {
+        "account": "0xdDf29c0E97601d8aB661C4B3C3A8AC7D9bD5cb77",
+        "amount": "13500"
+    },
+    {
+        "account": "0x88A0093C293113177175D3A995C49eEb68a887D9",
+        "amount": "14000"
+    },
+    {
+        "account": "0x45b5E0299401f38d7D18bDde102Ae62cDfF86429",
+        "amount": "14400"
+    },
+    {
+        "account": "0x4c297B30b8f391ad1516660Cd71c7cB861830816",
+        "amount": "14600"
+    },
+    {
+        "account": "kayyu.eth",
+        "amount": "14880"
+    },
+    {
+        "account": "0x91439ECEFA1BA082f0d285559EDdEC6301c9D429",
+        "amount": "14929"
+    },
+    {
+        "account": "0xchao.eth",
+        "amount": "15000"
+    },
+    {
+        "account": "0x790ac11183ddE23163b307E3F7440F2460526957",
+        "amount": "15000"
+    },
+    {
+        "account": "0x18386181bCD9F939B15c1aCF4a5525a82e398c3e",
+        "amount": "15000"
+    },
+    {
+        "account": "0xD74554760Adc11bB290E28BA7fc07C33923693ef",
+        "amount": "15261"
+    },
+    {
+        "account": "0x4a2e38f642357691C392E968d7F6171D911De73C",
+        "amount": "16200"
+    },
+    {
+        "account": "0x9965C18B17A4bA7E81765050f838D7977588b717",
+        "amount": "16500"
+    },
+    {
+        "account": "0xB67568c8A7aA3117c75b3Ebb699672aCead8D758",
+        "amount": "16572"
+    },
+    {
+        "account": "0x1FF54C7590543B69578A896c58582f159003DC43",
+        "amount": "19500"
+    },
+    {
+        "account": "0xC1C2D0860A213C630c7E285eB5b8B1ebDfa205B1",
+        "amount": "20000"
+    },
+    {
+        "account": "0xf194cd87A48eAafb5248e24B23E08105b4a15F3B",
+        "amount": "20450"
+    },
+    {
+        "account": "0x96f8568050F5A30191A424214DbE3d5D5b39C351",
+        "amount": "21000"
+    }
+]
