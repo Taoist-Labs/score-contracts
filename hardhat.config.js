@@ -4,8 +4,9 @@ require('@openzeppelin/hardhat-upgrades');
 require("dotenv").config();
 require("./tasks/setBudget");
 require("./tasks/sumScores");
-require("./tasks/airdrop");
+require("./tasks/score");
 require("./tasks/alex");
+require("./tasks/balanceOfSGN");
 // const { setGlobalDispatcher, ProxyAgent } = require('undici')
 // const proxyAgent = new ProxyAgent('http://127.0.0.1:7890')
 // setGlobalDispatcher(proxyAgent)
@@ -24,7 +25,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "SA6N56NGAPFWI99RM3GWDVX2IGENF5EUH6",
+    apiKey: process.env.ETHERSCAN_KEY,
   },
   networks: {
     goerli: {

@@ -18,5 +18,24 @@ SeeDAO Score 是 SeeDAO 社区积分。该积分可由管理员批量发放。�
 ## 空投
 
 ```bash
-npx hardhat airdrop --input ./data/accounts.json --contract 0xc74DEE15a4700D5df797bDD3982EE649A3Bb8c6C --network mainnet
+npx hardhat airdrop \
+    --input ./data/accounts.json \
+    --contract 0xc74DEE15a4700D5df797bDD3982EE649A3Bb8c6C \
+    --network mainnet
+```
+
+## 快照
+
+进行快照
+```bash
+npx hardhat snapshot \
+    --contract 0xc74DEE15a4700D5df797bDD3982EE649A3Bb8c6C \
+    --network mainnet
+```
+
+打印当前快照ID
+```bash
+npx hardhat snapPrint \
+    --contract 0xc74DEE15a4700D5df797bDD3982EE649A3Bb8c6C \
+    --network mainnet
 ```

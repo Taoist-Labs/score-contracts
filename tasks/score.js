@@ -37,3 +37,34 @@ task("airdrop", "Airdrop to a list of accounts")
             console.log(data[i].account, data[i].amount, receipt.transactionHash);
         }
     });
+
+task("snapshot", "Snapshot the Score contract")
+    .addParam("contract", "The `Score` contract address")
+    .setAction(async (taskArgs, hre) => {
+        const owner = await hre.ethers.getSigner(0);
+        const Score = await hre.ethers.getContractFactory("Score");
+        const score = await Score.attach(taskArgs.contract);
+        let snapshotId = await score.getCurrentSnapshotId();
+        console.log("Contract address is", score.address);
+        console.log("Old Snapshot ID is", snapshotId.toString());
+        let feeData = await ethers.provider.getFeeData();
+        const response = await score.connect(owner).snapshot({
+            maxFeePerGas: feeData.maxFeePerGas,
+            maxPriorityFeePerGas: feeData.maxPriorityFeePerGas,
+        });
+        console.log("send tx, waiting for confirmations...");
+        const receipt = await response.wait();
+        console.log("tx success, hash =", receipt.transactionHash);
+        snapshotId = await score.getCurrentSnapshotId();
+        console.log("New Snapshot ID is", snapshotId.toString());
+    });
+
+task("snapPrint", "Get the current `snapshot_id`")
+    .addParam("contract", "The `Score` contract address")
+    .setAction(async (taskArgs, hre) => {
+        const owner = await hre.ethers.getSigner(0);
+        const Score = await hre.ethers.getContractFactory("Score");
+        const score = await Score.attach(taskArgs.contract);
+        const snapshotId = await score.getCurrentSnapshotId();
+        console.log("Current Snapshot ID is", snapshotId.toString());
+    });
