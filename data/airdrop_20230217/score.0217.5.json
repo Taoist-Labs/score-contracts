@@ -1,0 +1,98 @@
+[
+    {
+        "account": "0x26765cd74f3e206E74Bf02bF21441E40B70fA616",
+        "amount": "3200"
+    },
+    {
+        "account": "0xCC3f58c9F934470A1FcEf9FF8E48Eb7B3E7B7Ac7",
+        "amount": "3145"
+    },
+    {
+        "account": "0xD910De88418eC64a10B00Eb45c45867C8A77bC98",
+        "amount": "3000"
+    },
+    {
+        "account": "0x0c05AaCC260D5EbfCCDd9B06ab3633120CBe9676",
+        "amount": "2733.3"
+    },
+    {
+        "account": "0x0b67E4577e5Fa87901483aFbF5BA11C2ebF1297A",
+        "amount": "1100"
+    },
+    {
+        "account": "0x1496f0bc152842c79993946946626af285b2b077",
+        "amount": "2033.64"
+    },
+    {
+        "account": "0x8d579e616F9f2696FF00008BE8a9566e2744074C",
+        "amount": "2033.6"
+    },
+    {
+        "account": "0x249a4A9a08833D1230ED7Fb6Acb08496B69bF405",
+        "amount": "1920"
+    },
+    {
+        "account": "0x53F5915683A33F912D385F0237fFc0886CaC7F60",
+        "amount": "1920"
+    },
+    {
+        "account": "0x8638808B98844E2b5BF7383CaCA50D6F4083edF8",
+        "amount": "1920"
+    },
+    {
+        "account": "0xe8dB51eeFd0D9ad2c4f23BD063043cEfCa3cCe77",
+        "amount": "1920"
+    },
+    {
+        "account": "0x264e07555473bd331d0b320791251050e6492a54",
+        "amount": "1920"
+    },
+    {
+        "account": "0xf3BF6BDfEA27464840d53b07c33Ea21C951D3746",
+        "amount": "1800"
+    },
+    {
+        "account": "0x43E335da57C3928F1CFA75775A3694bA792C9a7b",
+        "amount": "1400"
+    },
+    {
+        "account": "0xCDc11A65b5696ab1460fCB0D1B2c1909B1E8Da7F",
+        "amount": "1700"
+    },
+    {
+        "account": "0x57B2f9ce1C013E72f5085524a8403A03Af12b7D7",
+        "amount": "1408.5"
+    },
+    {
+        "account": "0xdaFE3083BD4865aDE8fEa183c0E058a585baB68b",
+        "amount": "1070"
+    },
+    {
+        "account": "0x7C12c702eD50ef37e15bedb0d53207a4abCe1e6c",
+        "amount": "1000"
+    },
+    {
+        "account": "0xB550CdD86ecd1c0165897fa508cF3a684de36076",
+        "amount": "960"
+    },
+    {
+        "account": "0x421eC3339C0Eb302d914b76dA25A849735906832",
+        "amount": "960"
+    },
+    {
+        "account": "0x36737250aa762A996E97D7F8F78B514455247710",
+        "amount": "960"
+    },
+    {
+        "account": "0xE3DB91F3B07F282f9890aE52e7fC0Bd2Adee2C74",
+        "amount": "900"
+    },
+    {
+        "account": "0x9dA57082e3A5f5514DD15538CBA75F5AC53046ab",
+        "amount": "900"
+    },
+    {
+        "account": "0xf343fd8910CAe41C656e04f9a34a9C9dcCE140eB",
+        "amount": "810"
+    }
+]
