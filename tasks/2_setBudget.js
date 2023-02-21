@@ -15,7 +15,7 @@ task("setBudget", "Set Budget of an account")
         let budget = ethers.utils.parseEther(taskArgs.budget);
         console.log("budget = ", ethers.utils.formatEther(budget));
         let feeData = await ethers.provider.getFeeData();
-        console.log(feeData);
+        // console.log(feeData);
         const tx = await score.connect(owner).setBudget(owner.address, budget, {
             maxFeePerGas: feeData.maxFeePerGas,
             maxPriorityFeePerGas: feeData.maxPriorityFeePerGas,

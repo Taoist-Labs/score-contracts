@@ -2,9 +2,9 @@ require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-etherscan");
 require('@openzeppelin/hardhat-upgrades');
 require("dotenv").config();
-require("./tasks/setBudget");
-require("./tasks/sumScores");
-require("./tasks/score");
+require("./tasks/1_sumScores");
+require("./tasks/2_setBudget");
+require("./tasks/3_airdrop");
 require("./tasks/alex");
 require("./tasks/balanceOfSGN");
 // const { setGlobalDispatcher, ProxyAgent } = require('undici')
