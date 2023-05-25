@@ -4,12 +4,13 @@ require('@openzeppelin/hardhat-upgrades');
 require("dotenv").config();
 require("./tasks/1_sumScores");
 require("./tasks/2_setBudget");
-require("./tasks/3_airdrop");
+require("./tasks/3_airdrop_old");
+require("./tasks/3_airdrop_new");
 require("./tasks/alex");
 require("./tasks/balanceOfSGN");
-// const { setGlobalDispatcher, ProxyAgent } = require('undici')
-// const proxyAgent = new ProxyAgent('http://127.0.0.1:7890')
-// setGlobalDispatcher(proxyAgent)
+const { setGlobalDispatcher, ProxyAgent } = require('undici')
+const proxyAgent = new ProxyAgent('http://127.0.0.1:7890')
+setGlobalDispatcher(proxyAgent)
 
 // const GOERLI_URL = process.env.GOERLI_URL;
 
@@ -23,6 +24,10 @@ module.exports = {
         runs: 1000,
       },
     },
+  },
+  gasReporter: {
+    enabled: process.env.REPORT_GAS !== undefined,
+    currency: "USD",
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_KEY,
@@ -41,7 +46,7 @@ module.exports = {
       buildName: "local"
     },
     sepolia: {
-      url: process.env.SEPOLIA_URL_INFURA,
+      url: process.env.SEPOLIA_URL_ALCHEMY,
       accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
   },
