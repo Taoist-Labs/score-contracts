@@ -30,12 +30,14 @@ task("airdrop", "Airdrop to a list of accounts")
         // const tx = await score.connect(owner).setBudget(owner.address, budget);
         // let receipt = await tx.wait(12);
         // console.log(receipt.transactionHash);
-        let feeData = await ethers.provider.getFeeData();
+        // let feeData = await ethers.provider.getFeeData();
         // console.log(feeData);
-        const response = await score.connect(owner).multiMint(accounts, amounts, {
-            maxFeePerGas: feeData.maxFeePerGas,
-            maxPriorityFeePerGas: feeData.maxPriorityFeePerGas,
-        });
+        const response = await score.connect(owner).multiMint(accounts, amounts
+        //     , {
+        //     maxFeePerGas: feeData.maxFeePerGas,
+        //     maxPriorityFeePerGas: feeData.maxPriorityFeePerGas,
+        // }
+        );
         console.log("send tx, waiting for confirmations...");
         const receipt = await response.wait();
         console.log("tx finished:", receipt.transactionHash);
