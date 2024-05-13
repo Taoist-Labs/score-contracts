@@ -23,6 +23,7 @@ contract ScoreV4 is
     bytes32 public constant BURNER_ROLE = keccak256("BURNER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant SNAPSHOT_ROLE = keccak256("SNAPSHOT_ROLE");
+    bytes32 public constant TRANSFERR_ROLE = keccak256("TRANSFERR_ROLE");
 
     uint256 public cap;
     mapping(address => uint256) private _budgets;
@@ -45,10 +46,12 @@ contract ScoreV4 is
         _grantRole(BURNER_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
         _grantRole(SNAPSHOT_ROLE, msg.sender);
+        _grantRole(TRANSFERR_ROLE, msg.sender);
         _setRoleAdmin(PAUSER_ROLE, OWNER_ROLE);
         _setRoleAdmin(BURNER_ROLE, OWNER_ROLE);
         _setRoleAdmin(MINTER_ROLE, OWNER_ROLE);
         _setRoleAdmin(SNAPSHOT_ROLE, OWNER_ROLE);
+        _setRoleAdmin(TRANSFERR_ROLE, OWNER_ROLE);
 
         cap = 1e27;
         _pause();
@@ -130,6 +133,7 @@ contract ScoreV4 is
         uint256 amount
     ) internal override(ERC20Upgradeable, ERC20SnapshotUpgradeable) {
         require(
+            hasRole(TRANSFERR_ROLE, msg.sender) ||
             hasRole(MINTER_ROLE, msg.sender) ||
                 hasRole(BURNER_ROLE, msg.sender) ||
                 !paused(),

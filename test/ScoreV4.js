@@ -7,6 +7,7 @@ const PAUSER_ROLE = utils.keccak256(utils.toUtf8Bytes("PAUSER_ROLE"));
 const BURNER_ROLE = utils.keccak256(utils.toUtf8Bytes("BURNER_ROLE"));
 const MINTER_ROLE = utils.keccak256(utils.toUtf8Bytes("MINTER_ROLE"));
 const SNAPSHOT_ROLE = utils.keccak256(utils.toUtf8Bytes("SNAPSHOT_ROLE"));
+const TRANSFERR_ROLE = utils.keccak256(utils.toUtf8Bytes("TRANSFERR_ROLE"));
 const cap = new ethers.utils.parseEther("1000000000");
 
 describe("ScoreV4", function () {
@@ -36,6 +37,7 @@ describe("ScoreV4", function () {
             expect(await score.hasRole(BURNER_ROLE, owner.address)).to.equal(true);
             expect(await score.hasRole(MINTER_ROLE, owner.address)).to.equal(true);
             expect(await score.hasRole(SNAPSHOT_ROLE, owner.address)).to.equal(true);
+            expect(await score.hasRole(TRANSFERR_ROLE, owner.address)).to.equal(true);
         });
         it("Should set the right role admin", async function () {
             const { score, owner } = await loadFixture(deployScoreFixture);
@@ -43,6 +45,7 @@ describe("ScoreV4", function () {
             expect(await score.getRoleAdmin(BURNER_ROLE)).to.equal(OWNER_ROLE);
             expect(await score.getRoleAdmin(MINTER_ROLE)).to.equal(OWNER_ROLE);
             expect(await score.getRoleAdmin(SNAPSHOT_ROLE)).to.equal(OWNER_ROLE);
+            expect(await score.getRoleAdmin(TRANSFERR_ROLE)).to.equal(OWNER_ROLE);
             expect(await score.getRoleAdmin(OWNER_ROLE)).to.equal(ethers.constants.HashZero);
             expect(await score.getRoleAdmin(ethers.constants.HashZero)).to.equal(ethers.constants.HashZero);
         });
@@ -64,7 +67,7 @@ describe("ScoreV4", function () {
         it("Should add roles", async function () {
             const { score, owner } = await loadFixture(deployScoreFixture);
             const account = await ethers.getSigner(1);
-            const roles = [SNAPSHOT_ROLE, MINTER_ROLE, BURNER_ROLE, PAUSER_ROLE];
+            const roles = [SNAPSHOT_ROLE, MINTER_ROLE, BURNER_ROLE, PAUSER_ROLE, TRANSFERR_ROLE];
             for (var i = 0; i < roles.length; i++) {
                 let role = roles[i];
                 expect(await score.hasRole(role, account.address)).to.equal(false);
@@ -233,6 +236,53 @@ describe("ScoreV4", function () {
             await score.connect(burner).transfer(member.address, amount);
             expect(await score.balanceOf(burner.address)).to.equal(0);
             expect(await score.balanceOf(member.address)).to.equal(amount);
+        });
+        it("Transferr can transfer", async function () {
+            const { score, owner } = await loadFixture(deployScoreFixture);
+            const transferr = await ethers.getSigner(1);
+            const member = await ethers.getSigner(3);
+            const amount = ethers.utils.parseEther("1");
+            await score.connect(owner).grantRole(TRANSFERR_ROLE, transferr.address);
+            await score.connect(owner).setBudget(owner.address, amount);
+            await score.connect(owner).mint(transferr.address, amount);
+
+            expect(await score.balanceOf(transferr.address)).to.equal(amount);
+            expect(await score.balanceOf(member.address)).to.equal(0);
+            await score.connect(transferr).transfer(member.address, amount);
+            expect(await score.balanceOf(transferr.address)).to.equal(0);
+            expect(await score.balanceOf(member.address)).to.equal(amount);
+        });
+        it("Transferr can transferFrom", async function () {
+            const { score, owner } = await loadFixture(deployScoreFixture);
+            const transferr = await ethers.getSigner(1);
+            const memberFrom = await ethers.getSigner(3);
+            const memberTo = await ethers.getSigner(4);
+            const amount = ethers.utils.parseEther("1");
+            await score.connect(owner).setBudget(owner.address, amount);
+            await score.connect(owner).mint(memberFrom.address, amount);
+
+            // `transferr` has no `TRANSFERR_ROLE`, call `transferFrom` will revert
+            await score.connect(memberFrom).approve(transferr.address, amount);
+            await expect(score.connect(transferr).transferFrom(memberFrom.address, memberTo.address, amount)).to.be.revertedWith('Pausable: paused');
+
+            // grant `TRANSFERR_ROLE` to `transferr`
+            await score.connect(owner).grantRole(TRANSFERR_ROLE, transferr.address);
+
+            // use `transferr` to transfer `amount` from `memberFrom` to `memberTo`
+            expect(await score.balanceOf(memberFrom.address)).to.equal(amount);
+            expect(await score.balanceOf(memberTo.address)).to.equal(0);
+            await score.connect(memberFrom).approve(transferr.address, amount);
+            await score.connect(transferr).transferFrom(memberFrom.address, memberTo.address, amount);
+            expect(await score.balanceOf(memberFrom.address)).to.equal(0);
+            expect(await score.balanceOf(memberTo.address)).to.equal(amount);
+
+            // use `transferr` to transfer `amount` from `memberTo` back to `memberFrom`
+            expect(await score.balanceOf(memberFrom.address)).to.equal(0);
+            expect(await score.balanceOf(memberTo.address)).to.equal(amount);
+            await score.connect(memberTo).approve(transferr.address, amount);
+            await score.connect(transferr).transferFrom(memberTo.address, memberFrom.address, amount);
+            expect(await score.balanceOf(memberFrom.address)).to.equal(amount);
+            expect(await score.balanceOf(memberTo.address)).to.equal(0);
         });
     });
     describe("Weight", function () {
