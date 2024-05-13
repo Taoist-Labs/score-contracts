@@ -19,7 +19,10 @@ describe("ScoreV4", function () {
         const score = await upgrades.deployProxy(Score);
         // await score.deployed();
 
-        return { score, owner };
+        const MockScoreLend = await ethers.getContractFactory("MockScoreLend");
+        const mockScoreLend = await upgrades.deployProxy(MockScoreLend, [score.address]);
+
+        return { score, mockScoreLend, owner };
     }
 
     describe("Deployment", function () {
@@ -283,6 +286,35 @@ describe("ScoreV4", function () {
             await score.connect(transferr).transferFrom(memberTo.address, memberFrom.address, amount);
             expect(await score.balanceOf(memberFrom.address)).to.equal(amount);
             expect(await score.balanceOf(memberTo.address)).to.equal(0);
+        });
+
+        it("Transferr is a Contract", async function () {
+            const { score, mockScoreLend, owner } = await loadFixture(deployScoreFixture);
+
+            const member = await ethers.getSigner(3);
+            const amount = ethers.utils.parseEther("1");
+            await score.connect(owner).setBudget(owner.address, amount);
+            await score.connect(owner).mint(member.address, amount);
+
+            // `mockScoreLend` contract has no `TRANSFERR_ROLE`, call `lend` will revert
+            await score.connect(member).approve(mockScoreLend.address, amount);
+            await expect(mockScoreLend.connect(member).lend()).to.be.revertedWith('Pausable: paused');
+
+            // grant `TRANSFERR_ROLE` to `mockScoreLend` contract
+            await score.connect(owner).grantRole(TRANSFERR_ROLE, mockScoreLend.address);
+
+            expect(await score.balanceOf(member.address)).to.equal(amount);
+            expect(await score.balanceOf(mockScoreLend.address)).to.equal(0);
+            await score.connect(member).approve(mockScoreLend.address, amount);
+            await mockScoreLend.connect(member).lend();
+            expect(await score.balanceOf(member.address)).to.equal(0);
+            expect(await score.balanceOf(mockScoreLend.address)).to.equal(amount);
+
+            expect(await score.balanceOf(member.address)).to.equal(0);
+            expect(await score.balanceOf(mockScoreLend.address)).to.equal(amount);
+            await mockScoreLend.connect(member).repay()
+            expect(await score.balanceOf(member.address)).to.equal(amount);
+            expect(await score.balanceOf(mockScoreLend.address)).to.equal(0);
         });
     });
     describe("Weight", function () {
