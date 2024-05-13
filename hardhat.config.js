@@ -50,5 +50,15 @@ module.exports = {
       url: process.env.SEPOLIA_URL_ALCHEMY,
       accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
+    polygon: {
+      url: process.env.POLYGON_URL,
+      chainId: 137,
+      accounts: [process.env.POLYGON_PRIVATE_KEY]
+    },
+    amoy: {
+      url: process.env.AMOY_URL,
+      chainId: 80002,
+      accounts: [process.env.AMOY_PRIVATE_KEY]
+    },
   },
 };
