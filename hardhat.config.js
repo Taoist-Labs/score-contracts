@@ -6,6 +6,7 @@ require("./tasks/1_sumScores");
 require("./tasks/2_setBudget");
 require("./tasks/3_airdrop_old");
 require("./tasks/3_airdrop_new");
+require("./tasks/4_allBalance");
 require("./tasks/alex");
 require("./tasks/balanceOfSGN");
 const { setGlobalDispatcher, ProxyAgent } = require('undici')
