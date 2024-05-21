@@ -14,12 +14,13 @@ task("setBudget", "Set Budget of an account")
         const score = await Score.attach(taskArgs.contract);
         let budget = ethers.utils.parseEther(taskArgs.budget);
         console.log("budget = ", ethers.utils.formatEther(budget));
-        let feeData = await ethers.provider.getFeeData();
+        // let feeData = await ethers.provider.getFeeData();
         // console.log(feeData);
-        const tx = await score.connect(owner).setBudget(owner.address, budget, {
-            maxFeePerGas: feeData.maxFeePerGas,
-            maxPriorityFeePerGas: feeData.maxPriorityFeePerGas,
-        });
+        // const tx = await score.connect(owner).setBudget(owner.address, budget, {
+        //     maxFeePerGas: feeData.maxFeePerGas,
+        //     maxPriorityFeePerGas: feeData.maxPriorityFeePerGas,
+        // });
+        const tx = await score.connect(owner).setBudget(owner.address, budget);
         let receipt = await tx.wait();
         console.log(receipt.transactionHash);
     });
