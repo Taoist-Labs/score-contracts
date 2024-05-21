@@ -30,7 +30,7 @@ npx hardhat setBudget \
 
 ```bash
 npx hardhat airdrop \
-    --input ./tasks/4_allBalance.output.json \
+    --input ./4_allBalance.output.json \
     --contract <ScoreV4-Address> \
     --network polygon
 ```
