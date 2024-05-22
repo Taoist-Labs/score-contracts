@@ -21,3 +21,9 @@
 | --- | --- | --- |
 | [v0.1.0](Score.abi.v0.1.0.json) | [0xc74DEE15a4700D5df797bDD3982EE649A3Bb8c6C](https://etherscan.io/address/0xc74dee15a4700d5df797bdd3982ee649a3bb8c6c) | 正式部署  |
 | [v0.3.0](Score.abi.v0.3.0.json) | | 升级批量Mint接口 |
+
+## Polygon 2024/05/21
+
+| Version                         | Address                                                                                                                | 说明                          |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------|
+| [v0.4.0](Score.abi.v0.4.0.json) | [0xe4825a1a31a76f72befa47f7160b132aa03813e0](https://polygonscan.com/token/0xe4825a1a31a76f72befa47f7160b132aa03813e0) | 新增 'TRANSFERR_ROLE' 角色；正式部署 |
