@@ -18,7 +18,7 @@ task("airdrop", "Airdrop to a list of accounts")
         let accounts = [];
         let amounts = [];
         for (var i = 0; i < data.length; i++) {
-            let realAmount = ethers.utils.parseEther(data[i].amount);
+            let realAmount = ethers.utils.parseEther(data[i].amount.toString());
             data[i]["realAmount"] = realAmount;
             // budget = budget.add(realAmount);
             accounts.push(data[i].account);

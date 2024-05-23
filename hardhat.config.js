@@ -6,6 +6,7 @@ require("./tasks/1_sumScores");
 require("./tasks/2_setBudget");
 require("./tasks/3_airdrop_old");
 require("./tasks/3_airdrop_new");
+require("./tasks/4_allBalance");
 require("./tasks/alex");
 require("./tasks/balanceOfSGN");
 const { setGlobalDispatcher, ProxyAgent } = require('undici')
@@ -48,6 +49,16 @@ module.exports = {
     sepolia: {
       url: process.env.SEPOLIA_URL_ALCHEMY,
       accounts: [process.env.GOERLI_PRIVATE_KEY],
+    },
+    polygon: {
+      url: process.env.POLYGON_URL,
+      chainId: 137,
+      accounts: [process.env.POLYGON_PRIVATE_KEY]
+    },
+    amoy: {
+      url: process.env.AMOY_URL,
+      chainId: 80002,
+      accounts: [process.env.AMOY_PRIVATE_KEY]
     },
   },
 };
